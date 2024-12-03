@@ -6,22 +6,22 @@
 
 <h4 align="center">
   <a href="https://www.cavrnus.com/">
-    <img src="https://img.shields.io/badge/Cavrnus%20Website-label?style=flat&color=white&link=https%3A%2F%2Fwww.cavrnus.com%2F
-    " alt="cavrnus" style="height: 20px">
+    <img src="https://img.shields.io/badge/Cavrnus%20Website-label?style=flat&color=white" alt="cavrnus" style="height: 20px;">
   </a>
-    <a href="https://www.youtube.com/@cavrnus">
-    <img src="https://img.shields.io/badge/Cavrnus%20YouTube-label?style=flat&logo=YouTube&logoColor=red&labelColor=white&color=white&link=https%3A%2F%2Fwww.youtube.com%2F%40cavrnus
-    " alt="youtube"style="height:20px">
+  <a href="https://www.youtube.com/@cavrnus">
+    <img src="https://img.shields.io/badge/Cavrnus%20YouTube-label?style=flat&logo=YouTube&logoColor=red&labelColor=white&color=white" alt="youtube" style="height:20px;">
   </a>
   <a href="https://twitter.com/cavrnus">
-    <img src="https://img.shields.io/badge/Cavrnus_Twitter-label?style=flat&logo=x&logoColor=black&labelColor=white&color=white&link=https%3A%2F%2Fwww.youtube.com%2F%40cavrnus
-    " alt="twitter" style="height: 20px;"></a>
-    <a href="https://discord.gg/AzgenDT7Ez">
-    <img src="https://img.shields.io/badge/Cavrnus_Support-label?style=flat&logo=discord&labelColor=white&color=white&link=https%3A%2F%2Fdiscord.gg%2FAzgenDT7Ez
-    " alt="discord" style="height: 20px;"></a>
+    <img src="https://img.shields.io/badge/Cavrnus_Twitter-label?style=flat&logo=x&logoColor=black&labelColor=white&color=white" alt="twitter" style="height: 20px;">
+  </a>
+  <a href="https://discord.gg/AzgenDT7Ez">
+    <img src="https://img.shields.io/badge/Cavrnus_Support-label?style=flat&logo=discord&labelColor=white&color=white" alt="discord" style="height: 20px;">
+  </a>
 </h4>
 
+
 ### Getting Started
+Welcome to the Cavrnus Multiplayer Game Project! This Unity project leverages the [Cavrnus Spatial Connector](https://cavrnus.atlassian.net/wiki/spaces/CSM/overview) to provide essential tools for building multiplayer games with persistence.
 
 Follow these steps to get started with the Cavrnus Unity Game Project:
 
@@ -51,16 +51,26 @@ Follow these steps to get started with the Cavrnus Unity Game Project:
    - Press **Play** in the Unity Editor to run the scene.
 
 ## Feature Guide
-Welcome to the Cavrnus Multiplayer Game Project! This Unity project is built leveraging the [Cavrnus Spatial Connector](https://cavrnus.atlassian.net/wiki/spaces/CSM/overview) to provide the necessary features to build multiplayer game with persistence.
-
-### **User Metadata** 
-Sync and manage user-specific data such as names, player scores, equipment loadouts, and other attributes across all participants in real time.
 
 ### **Avatar Switching** 
-Enable users to switch between avatars during gameplay, with updates reflected for all connected players.
+Enable users to switch between avatars during gameplay, with updates reflected for all connected players using player metadata
+
+<img src="Resources~/Readme/avatar-selection.png" alt="Avatar Selection Image"/>
+
+### **Avatar Emotes** 
+Synchronize avatar emotes across all participants in real time, allowing users to express themselves with gestures, animations, or predefined emote actions.
+
+<img src="Resources~/Readme/emotes.png" alt="Emotes Image"/>
 
 ### **Environment Properties** 
 Customize and synchronize environmental settings like lighting, skyboxes, and interactive objects to create a consistent shared experience.
+
+<img src="Resources~/Readme/environment.png" alt="Environment Properties Image"/>
+
+### **Level Switching** 
+Seamlessly switch between levels or scenes while maintaining user copresence and synchronization.
+
+<img src="Resources~/Readme/level.png" alt="Level Swiching Image"/>
 
 ## Full API Reference
 The Cavrnus Spatial Connector also includes an [API reference](https://cavrnus.atlassian.net/wiki/spaces/CSM/pages/824934449/API+Reference+Unity) upon which the No-Code components are built from. This provides the needed flexibility in use cases where No-Code components may not be applicable.
