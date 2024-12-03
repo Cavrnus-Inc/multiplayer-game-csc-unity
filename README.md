@@ -19,11 +19,10 @@
   </a>
 </h4>
 
-
 ### Getting Started
-Welcome to the Cavrnus Multiplayer Game Project! This Unity project leverages the [Cavrnus Spatial Connector](https://cavrnus.atlassian.net/wiki/spaces/CSM/overview) to provide essential tools for building multiplayer games with persistence.
+Welcome to the Cavrnus Unity Game Project! This Unity project leverages the [Cavrnus Spatial Connector](https://cavrnus.atlassian.net/wiki/spaces/CSM/overview) to provide essential tools for building multiplayer games with persistence.
 
-Follow these steps to get started with the Cavrnus Unity Game Project:
+Follow these steps to get started:
 
 1. **Install Unity**  
    Download and install **Unity version 2022.3.50f1 (URP)** from the [Unity Hub](https://unity.com/download).
@@ -73,7 +72,7 @@ Seamlessly switch between levels or scenes while maintaining user copresence and
 <img src="Resources~/Readme/level.png" alt="Level Swiching Image"/>
 
 ## Full API Reference
-The Cavrnus Spatial Connector also includes an [API reference](https://cavrnus.atlassian.net/wiki/spaces/CSM/pages/824934449/API+Reference+Unity) upon which the No-Code components are built from. This provides the needed flexibility in use cases where No-Code components may not be applicable.
+The Cavrnus Spatial Connector includes an [API reference](https://cavrnus.atlassian.net/wiki/spaces/CSM/pages/824934449/API+Reference+Unity). Build more custom features to support your project!
 
 ## Support and Feedback
 Do you need help? Have you found a bug? Reach out through the [Cavrnus Discord](https://discord.gg/AzgenDT7Ez).
