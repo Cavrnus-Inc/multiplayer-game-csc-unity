@@ -22,4 +22,8 @@ MonoBehaviour:
     SpaceDisplayName: 
     CavrnusSpaceJoinId: 
     IncludeRTC: 0
-  levels: []
+  levels:
+  - Tag: 
+    SpaceDisplayName: Default Space
+    CavrnusSpaceJoinId: csc-2
+    IncludeRTC: 0
