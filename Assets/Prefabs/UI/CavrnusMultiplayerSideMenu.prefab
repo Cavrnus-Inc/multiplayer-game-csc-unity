@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ef99b527b14fb9aaa7109d097786c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cavrnusSpaceLevelData: {fileID: 11400000, guid: 47214c08650c6394692eb6decabce3b9,
+  cavrnusSpaceLevelData: {fileID: 11400000, guid: 60e0cd7ab34a2a34496acd1ca963f638,
     type: 2}
   entryPrefab: {fileID: 3017546465566055398, guid: 4eef0e28aeec7064e9590572e7521b18,
     type: 3}
