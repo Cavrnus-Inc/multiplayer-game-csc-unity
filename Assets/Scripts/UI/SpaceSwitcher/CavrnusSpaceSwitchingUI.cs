@@ -5,7 +5,7 @@ namespace CavrnusSdk.CollaborationExamples
 {
     public class CavrnusSpaceSwitchingUI : MonoBehaviour
     {
-        [SerializeField] private MultiplayerGame.CavrnusSpaceLevelData cavrnusSpaceLevelData;
+        [SerializeField] private Experimental.CavrnusSpaceLevelData cavrnusSpaceLevelData;
                 
         [Space]
         [SerializeField] private CavrnusSpaceSwitchingEntry entryPrefab;

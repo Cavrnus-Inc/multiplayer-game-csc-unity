@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     [CreateAssetMenu(fileName = "CavrnusEmoteCollection", menuName = "Cavrnus/Emote Collection", order = 1)]
     public class CavrnusEmoteCollection : ScriptableObject

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CavrnusSdk.API;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     [CreateAssetMenu(fileName = "CavrnusSpaceLevelData", menuName = "Cavrnus/Samples/SpaceLevelData", order = 0)]
     public class CavrnusSpaceLevelData : ScriptableObject

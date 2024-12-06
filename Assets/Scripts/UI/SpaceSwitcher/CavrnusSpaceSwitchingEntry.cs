@@ -10,10 +10,10 @@ namespace CavrnusSdk.CollaborationExamples
         [SerializeField] private UnityEvent<bool> onSelectedUnityEvent;
         [SerializeField] private TextMeshProUGUI displayName;
         
-        public MultiplayerGame.CavrnusSpaceLevelData.SpaceLevelInfo SpaceData{ get; private set; }
+        public Experimental.CavrnusSpaceLevelData.SpaceLevelInfo SpaceData{ get; private set; }
         private Action<CavrnusSpaceSwitchingEntry> onSelected;
         
-        public void Setup(MultiplayerGame.CavrnusSpaceLevelData.SpaceLevelInfo data, Action<CavrnusSpaceSwitchingEntry> onSelect)
+        public void Setup(Experimental.CavrnusSpaceLevelData.SpaceLevelInfo data, Action<CavrnusSpaceSwitchingEntry> onSelect)
         {
             SpaceData = data;
             onSelected = onSelect;

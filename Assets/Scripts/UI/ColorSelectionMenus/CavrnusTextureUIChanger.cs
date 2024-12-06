@@ -1,6 +1,6 @@
 ﻿using CavrnusSdk.API;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class CavrnusTextureUIChanger : CavrnusColorCollectionUIBase
     {

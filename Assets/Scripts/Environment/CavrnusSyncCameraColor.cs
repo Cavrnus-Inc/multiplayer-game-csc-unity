@@ -2,7 +2,7 @@
 using CavrnusSdk.API;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame.Environment
+namespace CavrnusSdk.Experimental.Environment
 {
     public class CavrnusSyncCameraColor : MonoBehaviour
     {

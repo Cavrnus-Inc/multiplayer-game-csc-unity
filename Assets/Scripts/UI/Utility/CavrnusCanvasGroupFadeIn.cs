@@ -2,7 +2,7 @@
 using CavrnusSdk.UI;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class CavrnusCanvasGroupFadeIn : MonoBehaviour
     {

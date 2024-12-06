@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class ColorTextureChangerItem : MonoBehaviour
     {

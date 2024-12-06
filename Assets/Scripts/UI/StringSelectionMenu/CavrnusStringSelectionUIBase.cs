@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CavrnusSdk.API;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public abstract class CavrnusStringSelectionUIBase : MonoBehaviour
     {

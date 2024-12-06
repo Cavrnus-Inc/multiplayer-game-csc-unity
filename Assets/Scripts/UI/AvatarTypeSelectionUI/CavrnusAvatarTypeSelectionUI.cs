@@ -1,7 +1,7 @@
 ﻿using CavrnusSdk.API;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class CavrnusAvatarTypeSelectionUI : CavrnusStringSelectionUIBase
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using UnityBase;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     [CreateAssetMenu(fileName = "NewColorCollection", menuName = "Cavrnus/Color Collection", order = 1)]
     public class CavrnusColorCollection : ScriptableObject

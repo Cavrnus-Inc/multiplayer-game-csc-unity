@@ -1,4 +1,4 @@
-﻿namespace CavrnusSdk.MultiplayerGame
+﻿namespace CavrnusSdk.Experimental
 {
     public static class CavrnusPropertyInfo
     {

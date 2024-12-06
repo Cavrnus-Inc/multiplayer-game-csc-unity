@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     [CreateAssetMenu(fileName = "NewAvatarTypesCollection", menuName = "Cavrnus/Avatar Types", order = 1)]
     public class CavrnusAvatarTypes : ScriptableObject

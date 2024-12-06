@@ -3,7 +3,7 @@ using CavrnusSdk.API;
 using UnityBase;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class CavrnusBindRemotePlayerController : MonoBehaviour
     {

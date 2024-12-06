@@ -3,7 +3,7 @@ using CavrnusSdk.API;
 using TMPro;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class CavrnusSpaceInfoUIBindings : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class CavrnusAvatarInputReceiver : MonoBehaviour
     {

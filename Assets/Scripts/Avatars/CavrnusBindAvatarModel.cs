@@ -5,7 +5,7 @@ using CavrnusCore;
 using CavrnusSdk.API;
 using UnityEngine;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public class CavrnusBindAvatarModel : MonoBehaviour
     {

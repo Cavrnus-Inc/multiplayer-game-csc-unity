@@ -1,5 +1,5 @@
 ﻿using CavrnusSdk.API;
-using CavrnusSdk.MultiplayerGame;
+using CavrnusSdk.Experimental;
 using UnityEngine;
 
 namespace CavrnusDemo.EmoteSelectionUI

@@ -5,7 +5,7 @@ using CavrnusSdk.Setup;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace CavrnusSdk.MultiplayerGame
+namespace CavrnusSdk.Experimental
 {
     public static class CavrnusSampleHelpers
     {
