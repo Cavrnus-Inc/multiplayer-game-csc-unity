@@ -10,21 +10,15 @@ namespace CavrnusSdk.Experimental
     public class CavrnusColorCollection : ScriptableObject
     {
         [Serializable]
-        public class ColorTextureInfo
+        public class ColorDataObject
         {
             public string DisplayName;
             public Color Color;
-            public Texture Texture;
         }
 
-        public List<ColorTextureInfo> ColorData;
+        public List<ColorDataObject> ColorData;
 
-        public ColorTextureInfo GetDataFromTextureName(string texture)
-        {
-            return ColorData.FirstOrDefault(data => data.Texture.name.ToLowerInvariant().Equals(texture.ToLowerInvariant()));
-        }
-        
-        public ColorTextureInfo GetDataFromColor(Color color)
+        public ColorDataObject GetDataFromColor(Color color)
         {
             return ColorData.FirstOrDefault(data => ColorsEqual(data.Color, color));
         }

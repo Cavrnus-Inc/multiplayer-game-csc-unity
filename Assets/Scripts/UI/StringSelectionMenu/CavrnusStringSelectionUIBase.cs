@@ -1,42 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using CavrnusSdk.API;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace CavrnusSdk.Experimental
 {
     public abstract class CavrnusStringSelectionUIBase : MonoBehaviour
     {
+        [SerializeField] private CavrnusPropertyObject<string> propertyObject;
+        
         [Space]
         [SerializeField] protected CavrnusStringSelectionItem Prefab;
         [SerializeField] protected Transform Container;
 
-        protected readonly List<CavrnusStringSelectionItem> Items = new List<CavrnusStringSelectionItem>();
-
-        protected CavrnusSpaceConnection SpaceConn;
-        protected CavrnusUser LocalUser;
-        private IDisposable binding;
+        protected readonly List<CavrnusStringSelectionItem> Items = new();
 
         protected virtual void Start()
         {
-            CavrnusFunctionLibrary.AwaitAnySpaceConnection(sc => {
-                sc.AwaitLocalUser(lu => {
-                    SpaceConn = sc;
-                    LocalUser = lu;
-                    BindProperty();
-                    PopulateItems();
-                });
+            propertyObject.AwaitInitialize(this, _ => {
+                PopulateItems();
+                BindProperty();
             });
         }
 
         protected abstract void PopulateItems();
-        protected abstract void BindProperty();
-        protected abstract void PostOrSendValue(string val);
 
-        protected void OnServerValueUpdated(string severVal)
-        {
-            SetSelectedItem(severVal);
-        }
+        private void BindProperty() => propertyObject.BindProperty(this, OnPropertyUpdated);
+        protected void OnPropertyUpdated(string severVal) => SetSelectedItem(severVal);
 
         protected void SetSelectedItem(string selectedVal)
         {
@@ -46,9 +34,12 @@ namespace CavrnusSdk.Experimental
             }
         }
 
-        protected virtual void OnDestroy()
+        protected void PostValue(string val)
         {
-            binding?.Dispose();
+            SetSelectedItem(val);
+            propertyObject.PostOrUpdateValue(this, val);
         }
+        
+        private void OnDestroy() => propertyObject.DisposeProperty(this, OnPropertyUpdated);
     }
 }

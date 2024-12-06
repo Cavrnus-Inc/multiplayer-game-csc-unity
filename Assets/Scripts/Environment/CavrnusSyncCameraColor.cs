@@ -1,33 +1,23 @@
-﻿using System;
-using CavrnusSdk.API;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CavrnusSdk.Experimental.Environment
 {
     public class CavrnusSyncCameraColor : MonoBehaviour
     {
         [SerializeField] private Camera cam;
+        [SerializeField] private CavrnusPropertyObject<Color> propertyObject;
         
-        private IDisposable binding;
-
         private void Start()
         {
             if (cam == null)
                 cam = Camera.main;
             
-            CavrnusFunctionLibrary.AwaitAnySpaceConnection(sc => {
-                binding = sc.BindColorPropertyValue(CavrnusPropertyInfo.EnvironmentContainer, CavrnusPropertyInfo.EnvironmentColor, OnPropertyUpdated);
+            propertyObject.AwaitInitialize(this, _ => {
+                propertyObject.BindProperty(this, OnPropertyUpdated);
             });
         }
 
-        private void OnPropertyUpdated(Color color)
-        {
-            cam.backgroundColor = color;
-        }
-
-        private void OnDestroy()
-        {
-            binding?.Dispose();
-        }
+        private void OnPropertyUpdated(Color color) => cam.backgroundColor = color;
+        private void OnDestroy() => propertyObject.DisposeProperty(this, OnPropertyUpdated);
     }
 }

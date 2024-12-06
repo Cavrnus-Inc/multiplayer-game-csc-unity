@@ -1,5 +1,4 @@
-﻿using CavrnusSdk.API;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CavrnusSdk.Experimental
 {
@@ -12,18 +11,8 @@ namespace CavrnusSdk.Experimental
             foreach (var at in avatars.AvatarTypes) {
                 var go = Instantiate(Prefab, Container);
                 Items.Add(go.GetComponent<CavrnusStringSelectionItem>());
-                go.Setup(at.Name, PostOrSendValue);
+                go.Setup(at.Name, PostValue);
             }
-        }
-
-        protected override void BindProperty()
-        {
-            LocalUser.BindToUserMetadata(CavrnusPropertyInfo.PlayerAvatarProperty, OnServerValueUpdated);
-        }
-
-        protected override void PostOrSendValue(string val)
-        {
-            CavrnusFunctionLibrary.UpdateLocalUserMetadataString(CavrnusPropertyInfo.PlayerAvatarProperty, val);
         }
     }
 }

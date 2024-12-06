@@ -7,14 +7,13 @@ namespace CavrnusSdk.Experimental
 {
     public class CavrnusStringSelectionItem : MonoBehaviour
     {
-        [SerializeField] private UnityEvent<bool> onUnitySelectedState;
-
         public string StringValue{ get; private set; }
-
-        [SerializeField] private TextMeshProUGUI tmPro;
         
         private Action<string> onSelected;
 
+        [SerializeField] private UnityEvent<bool> onUnitySelectedState;
+        [SerializeField] private TextMeshProUGUI tmPro;
+        
         public void Setup(string stringVal, Action<string> onSelected)
         {
             StringValue = stringVal;

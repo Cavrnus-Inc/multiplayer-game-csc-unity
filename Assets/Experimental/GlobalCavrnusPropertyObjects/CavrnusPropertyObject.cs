@@ -40,10 +40,10 @@ namespace CavrnusSdk.Experimental
         public bool IsUserMetadata;
         public bool AllowRepeatTransientValues;
         
-        // Keep track of the caller and it's subsequent Property Objects 
-        private readonly Dictionary<object, Dictionary<string, PropertyContextData>> callerContainerMap = new();
+        // Keep track of the caller and it's Property Objects 
+        private readonly Dictionary<object, PropertyContextData> callerContextMap = new();
         
-        public void Initialize(object caller, Action<CavrnusSpaceConnection> onConnected = null, string spaceTag = "")
+        public void AwaitInitialize(object caller, Action<CavrnusSpaceConnection> onConnected = null, string spaceTag = "")
         {
             CavrnusFunctionLibrary.AwaitSpaceConnectionByTag(spaceTag, sc =>
             {
@@ -65,6 +65,8 @@ namespace CavrnusSdk.Experimental
                 var ctx = GetPropertyContext(caller);
                 ctx.User = remoteUser;
                 ctx.SpaceConnection = sc;
+                
+                // remoter user containerId
                 
                 onConnected?.Invoke(sc);
             });
@@ -143,27 +145,19 @@ namespace CavrnusSdk.Experimental
         
         private PropertyContextData GetPropertyContext(object caller)
         {
-            if (callerContainerMap.TryGetValue(caller, out var entry)) {
-                if (entry.TryGetValue(PropertyName, out var ctx))
-                    return ctx;
+            if (!callerContextMap.TryGetValue(caller, out var context))
+            {
+                context = new PropertyContextData();
+                callerContextMap[caller] = context;
             }
-            
-            entry = new Dictionary<string, PropertyContextData>();
-            entry.TryAdd(PropertyName, new PropertyContextData());
-            callerContainerMap[caller] = entry;
-
-            return entry[PropertyName];
+            return context;
         }
         
         protected string GetContainerName(object caller)
         {
-            if (callerContainerMap.TryGetValue(caller, out var propertyMap) &&
-                propertyMap.TryGetValue(PropertyName, out var ctx)) {
-
+            if (callerContextMap.TryGetValue(caller, out var ctx)) {
                 if (PropertyObjectContainerType == PropertyObjectContainerTypeEnum.User)
                     return ctx.User.ContainerId;
-                
-                return ctx.ContainerName;
             }
 
             return ContainerName;
@@ -178,7 +172,7 @@ namespace CavrnusSdk.Experimental
             ctx.Binding?.Dispose();
             ctx.TransientUpdater = null;
             
-            callerContainerMap.Remove(caller);
+            callerContextMap.Remove(caller);
         }
     }
 }

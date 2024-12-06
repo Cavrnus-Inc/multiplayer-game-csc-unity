@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ba58f6f4b334dc69f757b25baaad4c7, type: 3}
-  m_Name: CavrnusFloatPropertyObject_
+  m_Script: {fileID: 11500000, guid: 2694d1fd1b42489f92342b64d468eb7f, type: 3}
+  m_Name: CavrnusStringPropertyObject_Emotes
   m_EditorClassIdentifier: 
   PropertyObjectContainerType: 0
-  PropertyObjectJournalType: 0
+  PropertyObjectJournalType: 1
   ContainerName: 
-  PropertyName: 
-  DefaultValue: 0
+  PropertyName: Emote
+  DefaultValue: 
   IsUserMetadata: 0
-  AllowRepeatTransientValues: 0
-  minMaxSliderLimits: {x: 0, y: 0}
+  AllowRepeatTransientValues: 1

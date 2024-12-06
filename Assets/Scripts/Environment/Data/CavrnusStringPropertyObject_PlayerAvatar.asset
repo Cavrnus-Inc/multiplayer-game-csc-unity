@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1dd6f9ad4fe4078939d43c5b4d32261, type: 3}
-  m_Name: CavrnusColorPropertyObject_BackgroundColor
+  m_Script: {fileID: 11500000, guid: 2694d1fd1b42489f92342b64d468eb7f, type: 3}
+  m_Name: CavrnusStringPropertyObject_PlayerAvatar
   m_EditorClassIdentifier: 
-  PropertyObjectContainerType: 1
+  PropertyObjectContainerType: 0
   PropertyObjectJournalType: 0
-  ContainerName: Environment
-  PropertyName: Color
-  DefaultValue: {r: 0.3647059, g: 0.7960785, b: 0.40784317, a: 1}
-  IsUserMetadata: 0
+  ContainerName: 
+  PropertyName: PlayerAvatar
+  DefaultValue: Ninja
+  IsUserMetadata: 1
   AllowRepeatTransientValues: 0

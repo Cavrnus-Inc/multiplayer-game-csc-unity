@@ -4,24 +4,22 @@ using UnityEngine.UI;
 
 namespace CavrnusSdk.Experimental
 {
-    public class ColorTextureChangerItem : MonoBehaviour
+    public class ColorChangerItem : MonoBehaviour
     {
         public Color Color{ get; private set; }
-        public Texture Texture{ get; private set; }
         
         [SerializeField] private Image image;
         [SerializeField] private GameObject selectedBorder;
 
-        public CavrnusColorCollection.ColorTextureInfo Info{ get; private set; }
-        private Action<CavrnusColorCollection.ColorTextureInfo> onSelected;
+        public CavrnusColorCollection.ColorDataObject Info{ get; private set; }
+        private Action<CavrnusColorCollection.ColorDataObject> onSelected;
 
-        public void Setup(CavrnusColorCollection.ColorTextureInfo info, Action<CavrnusColorCollection.ColorTextureInfo> onSelected)
+        public void Setup(CavrnusColorCollection.ColorDataObject info, Action<CavrnusColorCollection.ColorDataObject> onSelected)
         {
             Info = info;
             this.onSelected = onSelected;
 
             Color = info.Color;
-            Texture = info.Texture;
             image.color = info.Color;
             
             selectedBorder.SetActive(false);

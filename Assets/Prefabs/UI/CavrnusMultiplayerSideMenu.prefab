@@ -1174,7 +1174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45, y: -529.23083}
+  m_AnchoredPosition: {x: 45, y: -557.88513}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2864757146930976238
@@ -2676,7 +2676,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5589475257144955041, guid: 63e59add97910954883128a3ca2b3c37,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3735709147641277899}
+      addedObject: {fileID: 4563366786244209672}
   m_SourcePrefab: {fileID: 100100000, guid: 63e59add97910954883128a3ca2b3c37, type: 3}
 --- !u!224 &1921337675840827533 stripped
 RectTransform:
@@ -2696,7 +2696,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6921677369929761347}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3735709147641277899
+--- !u!114 &4563366786244209672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2705,11 +2705,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3287472443344802530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2253ea12f62244149674d62923611e00, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d36710caf80456cafe4924329a12339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainerName: Environment
-  StringName: Color
+  propertyObject: {fileID: 11400000, guid: 43696f97f80607c4bbd4f9ffcb037ba5, type: 2}
   prefab: {fileID: 1568202780313406549, guid: 1ec1034e729adef4fb5e698f6f99c821, type: 3}
   container: {fileID: 2200242660799103989}
   ColorCollection: {fileID: 11400000, guid: 3a68d5275fcd9d542a4483628ccf2f97, type: 2}
@@ -2935,6 +2934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e766fd59e5c34fd4b0c7fa9cb23dc171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  propertyObject: {fileID: 11400000, guid: 9605d47508e853d4f8138d50639a8660, type: 2}
   Prefab: {fileID: 8838308431373863732, guid: afba48ef148eb1049b139a0370bd58c4, type: 3}
   Container: {fileID: 2018819773027675814}
   emotes: {fileID: 11400000, guid: a6dfc8412fbdc964a963802ba9a80601, type: 2}
@@ -3325,6 +3325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05590acb44ab4bf2afbb9bf4c43c1220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  propertyObject: {fileID: 11400000, guid: abc401b4364e62a45a5b5ab9002aeaa4, type: 2}
   Prefab: {fileID: 8838308431373863732, guid: afba48ef148eb1049b139a0370bd58c4, type: 3}
   Container: {fileID: 924321494861970187}
   avatars: {fileID: 11400000, guid: 473a8c7868101274c8f936f9b2f354b1, type: 2}
