@@ -49,7 +49,7 @@ namespace CavrnusSdk.Experimental
                     SendUpdateEvent(val.ToFloat(), onPropertyUpdated);
                 });
         
-            if (UseUserContainer)
+            if (PropertyObjectContainerType == PropertyObjectContainerTypeEnum.User)
                 return GetUser(caller).BindFloatPropertyValue(PropertyName, s => SendUpdateEvent(s, onPropertyUpdated));
             
             return GetSpaceConnection(caller)?.BindFloatPropertyValue(GetContainerName(caller), PropertyName, f => SendUpdateEvent(f, onPropertyUpdated));

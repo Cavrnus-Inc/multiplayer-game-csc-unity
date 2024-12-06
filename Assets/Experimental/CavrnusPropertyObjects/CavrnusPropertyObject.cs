@@ -5,6 +5,18 @@ using UnityEngine;
 
 namespace CavrnusSdk.Experimental
 {
+    public enum PropertyObjectContainerTypeEnum
+    {
+        User = 0,
+        Space = 1
+    }
+    
+    public enum PropertyObjectJournalTypeEnum
+    {
+        Saved = 0,
+        Transient = 1
+    }
+    
     public abstract class CavrnusPropertyObject<T> : ScriptableObject
     {
         // We need object containing contextual data for each object/caller since Property Objects are shared instances
@@ -17,15 +29,15 @@ namespace CavrnusSdk.Experimental
             public IDisposable Binding;
             public CavrnusLivePropertyUpdate<T> TransientUpdater;
         }
+
+        public PropertyObjectContainerTypeEnum PropertyObjectContainerType;
+        public PropertyObjectJournalTypeEnum PropertyObjectJournalType;
         
         public string ContainerName;
         public string PropertyName;
         public T DefaultValue;
         
-        public bool UseUserContainer;
         public bool IsUserMetadata;
-        
-        public bool IsTransient;
         public bool AllowRepeatTransientValues;
         
         // Keep track of the caller and it's subsequent Property Objects 
@@ -82,7 +94,7 @@ namespace CavrnusSdk.Experimental
 
         public void PostOrUpdateValue(object caller, T value)
         {
-            if (IsTransient)
+            if (PropertyObjectJournalType == PropertyObjectJournalTypeEnum.Transient)
                 UpdateTransientData(caller, value);
             else
                 PostValue(caller, value);
@@ -148,7 +160,7 @@ namespace CavrnusSdk.Experimental
             if (callerContainerMap.TryGetValue(caller, out var propertyMap) &&
                 propertyMap.TryGetValue(PropertyName, out var ctx)) {
 
-                if (UseUserContainer)
+                if (PropertyObjectContainerType == PropertyObjectContainerTypeEnum.User)
                     return ctx.User.ContainerId;
                 
                 return ctx.ContainerName;

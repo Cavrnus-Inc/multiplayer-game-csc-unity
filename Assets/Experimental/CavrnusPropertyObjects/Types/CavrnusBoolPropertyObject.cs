@@ -46,7 +46,7 @@ namespace CavrnusSdk.Experimental
                 });
             }
             
-            if (UseUserContainer)
+            if (PropertyObjectContainerType == PropertyObjectContainerTypeEnum.User)
                 return GetUser(caller).BindBoolPropertyValue(PropertyName, s => SendUpdateEvent(s, onPropertyUpdated));
             
             return GetSpaceConnection(caller).BindBoolPropertyValue(GetContainerName(caller), PropertyName, val => {
